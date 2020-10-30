@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
+/**
+ * @type {mongoose.Model<Document, {}>}
+ */
 let AccountModel = {};
 const iterations = 10000;
 const saltLength = 64;
@@ -83,5 +86,8 @@ AccountSchema.statics.authenticate = (username, password, callback) => {
 
 AccountModel = mongoose.model('Account', AccountSchema);
 
+/**
+ * @type {mongoose.Model<Document, {}>}
+ */
 module.exports.AccountModel = AccountModel;
 module.exports.AccountSchema = AccountSchema;
