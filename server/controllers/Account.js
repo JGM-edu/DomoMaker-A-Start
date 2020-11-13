@@ -7,6 +7,8 @@ const { Account } = models;
  * @param {Response} res
  */
 const loginPage		= (req, res) => {
+  console.log('loginPage');
+  console.log(req);
   res.render('login', { csrfToken: req.csrfToken() });
 };
 /**
@@ -15,6 +17,8 @@ const loginPage		= (req, res) => {
  * @param {Response} res
  */
 const signupPage	= (req, res) => {
+  console.log('signupPage');
+  console.log(req);
   res.render('signup', { csrfToken: req.csrfToken() });
 };
 /**
